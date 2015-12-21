@@ -1,6 +1,6 @@
 {
   "name": "url-mailer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "parse a smtp url and create a mailer object",
   "repository": {
     "type": "git",

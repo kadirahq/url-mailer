@@ -6,10 +6,10 @@ import url from 'url';
 const { info } = console;
 
 export default class MailClient {
-  constructor(mailUrl, {loggingOnly=false, sender}) {
+  constructor(mailUrl, {loggingOnly=false, from}) {
     this.mailUrl = mailUrl || 'smtp://user:pass@smtp.host:465';
     this.loggingOnly = loggingOnly;
-    this.from = sender
+    this.from = from;
 
     const {
       auth, port, hostname
@@ -36,8 +36,8 @@ export default class MailClient {
       from: from || this.from,
       to: to,
       subject,
-      text: fromString(message),
-      html: message
+      text: fromString(content),
+      html: content
     };
 
     return this.transport.sendMail(mailOptions);
