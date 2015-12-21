@@ -1,8 +1,11 @@
 {
-  "name": "smtp-url-mailer",
-  "version": "0.0.1",
-  "description": "parsed a smtp url and create a mailer object",
-  "main": "index.js",
+  "name": "url-mailer",
+  "version": "0.0.2",
+  "description": "parse a smtp url and create a mailer object",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kadirahq/url-mailer.git"
+  },
   "scripts": {
     "build": "./node_modules/.bin/babel src -d lib",
     "test": "./node_modules/.bin/mocha lib"
