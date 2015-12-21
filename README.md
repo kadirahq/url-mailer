@@ -7,6 +7,9 @@ Create a mail client with standard url to a smtp server. So the url of mail clie
 ```javascript
 import MailClient from 'url-mailer';
 
+const mailUrl = 'smtp://user:pass@smtp.test.host:465';
+const mailer = new MailClient(mailUrl, {});
+
 const mailOptions = {
   from: 'Bob Sanders <bob@example.com>',
   to: 'alice@example.com',
@@ -14,7 +17,7 @@ const mailOptions = {
   content: '<b>Important:</b> Check <a href="http://foobar.com"> this </a>'
 }
 
-m.sendEmail(mailOptions).then(() => {
+mailer.sendEmail(mailOptions).then(() => {
   console.log('successful!')
 });
 ```
